@@ -1,0 +1,93 @@
+{
+	"info": {
+		"_postman_id": "43a1384d-c5f9-4557-8a97-b26687ae3e1a",
+		"name": "Cloud Services",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27477100",
+		"_collection_link": "https://dealup.postman.co/workspace/Munia~8d28ac64-2ada-44b2-a74e-2966c8f1938e/collection/27477100-43a1384d-c5f9-4557-8a97-b26687ae3e1a?action=share&source=collection_link&creator=27477100"
+	},
+	"item": [
+		{
+			"name": "Amazon Services",
+			"item": []
+		},
+		{
+			"name": "singleFile",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/soygi/Pictures/Capitan America.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{domain}}/uploadSingle",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"uploadSingle"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "upload Multiple",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "files",
+							"type": "file",
+							"src": "/C:/Users/soygi/Pictures/Capitan America.jpg"
+						},
+						{
+							"key": "files",
+							"type": "file",
+							"src": "/C:/Users/soygi/Pictures/wolverine.jpg"
+						},
+						{
+							"key": "files",
+							"type": "file",
+							"src": "/C:/Users/soygi/Pictures/Henry Certificate FULL Stack.pdf"
+						},
+						{
+							"key": "files",
+							"type": "file",
+							"src": [],
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{dominio}}/uploadMultiple/Perfiles/0001",
+					"host": [
+						"{{dominio}}"
+					],
+					"path": [
+						"uploadMultiple",
+						"Perfiles",
+						"0001"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "domain",
+			"value": "http://localhost:3000"
+		}
+	]
+}
